@@ -37,6 +37,9 @@ namespace GGJ2020
 				var pipelineAsset = Instantiate(GraphicsSettings.renderPipelineAsset) as HDRenderPipelineAsset;
 				var set = pipelineAsset.currentPlatformRenderPipelineSettings;
 				set.hdShadowInitParams.maxShadowRequests = 64;
+
+				set.supportVolumetrics = false;
+				
 				GraphicsSettings.renderPipelineAsset = pipelineAsset;
 				densityVolume.enabled = true;
 				cookieCloudAnimation.enabled = true;
